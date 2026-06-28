@@ -1,71 +1,82 @@
 import React from 'react';
+import { IconAward, IconTrophy, IconWebMonitor, IconUsers } from './Icons';
+
+const benefits = [
+  {
+    Icon: IconAward,
+    title: 'Completion Certificate',
+    text: 'Issued by Lawctopus Law School upon completing the course. Shareable on LinkedIn, recognised by law firms.',
+    tag: 'On Completion',
+    color: 'text-[#991b1b]',
+    bg: 'bg-red-50',
+    tagColor: 'text-[#991b1b] bg-red-50 border-red-200',
+  },
+  {
+    Icon: IconTrophy,
+    title: 'Merit Certificate',
+    text: 'Awarded exclusively to top-performing learners — a mark of distinction that stands out in applications.',
+    tag: 'Top Performers',
+    color: 'text-[#b45309]',
+    bg: 'bg-amber-50',
+    tagColor: 'text-[#b45309] bg-amber-50 border-amber-200',
+  },
+  {
+    Icon: IconWebMonitor,
+    title: 'Free Webinar Access',
+    text: 'Lifetime access to webinars on contract drafting, contract lifecycle management, and more — completely free.',
+    tag: 'Lifetime Access',
+    color: 'text-indigo-600',
+    bg: 'bg-indigo-50',
+    tagColor: 'text-indigo-600 bg-indigo-50 border-indigo-200',
+  },
+  {
+    Icon: IconUsers,
+    title: 'LLS Alumni Network',
+    text: 'Join an exclusive alumni WhatsApp group for internship leads, job alerts, course discounts, and peer networking.',
+    tag: 'Exclusive Community',
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-50',
+    tagColor: 'text-emerald-600 bg-emerald-50 border-emerald-200',
+  },
+];
 
 export default function AddonBenefits() {
-  const benefits = [
-    {
-      title: "Completion Certificates",
-      text: "Completion certificates are issued by Lawctopus Law School after completing the course.",
-      icon: (
-        <svg className="w-5 h-5 text-rose-700" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      )
-    },
-    {
-      title: "Merit Certificates",
-      text: "Merit certificates are awarded to best-performing learners.",
-      icon: (
-        <svg className="w-5 h-5 text-rose-700" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l1.912 5.886h6.19l-5.008 3.639L17.006 18.4 12 14.761l-5.006 3.64 1.912-5.875-5.008-3.64h6.19L12 3z" />
-        </svg>
-      )
-    },
-    {
-      title: "Free Webinar Access",
-      text: "Access to webinars on contract drafting, contract lifecycle management, etc., are given for free.",
-      icon: (
-        <svg className="w-5 h-5 text-rose-700" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-        </svg>
-      )
-    },
-    {
-      title: "LLS Alumni Community",
-      text: "LLS alumni groups are available for exclusive internship/job notifications and discounts on courses/workshops.",
-      icon: (
-        <svg className="w-5 h-5 text-rose-700" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      )
-    }
-  ];
-
   return (
     <section id="add-ons" className="space-y-8 scroll-mt-24">
       {/* Title */}
-      <div className="space-y-2">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-          Add-on Benefits
-        </h2>
-        <div className="h-1 w-20 bg-rose-700 rounded-full"></div>
+      <div className="flex items-start gap-4">
+        <span className="section-num hidden sm:block select-none" aria-hidden="true">08</span>
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight leading-snug">
+            Add-on Benefits
+          </h2>
+          <span className="heading-underline"></span>
+        </div>
       </div>
 
-      {/* Grid of Add-ons */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {benefits.map((benefit, idx) => (
+      {/* 2×2 grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {benefits.map((b) => (
           <div
-            key={idx}
-            className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-150 flex gap-4 items-start"
+            key={b.title}
+            className="bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-[#b45309]/30 transition-all duration-200 flex gap-4 items-start group"
           >
-            <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center flex-shrink-0">
-              {benefit.icon}
+            {/* Distinct icon per benefit */}
+            <div className={`w-11 h-11 rounded-xl ${b.bg} border border-slate-100 flex items-center justify-center flex-shrink-0 ${b.color} group-hover:scale-105 transition-transform duration-200`}>
+              <b.Icon className="w-5 h-5" />
             </div>
-            <div className="space-y-1.5">
-              <h3 className="font-bold text-slate-950 text-[15px] leading-snug">
-                {benefit.title}
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-[13px] leading-relaxed">
-                {benefit.text}
+
+            <div className="flex-1 space-y-1">
+              <div className="flex items-start justify-between gap-2 flex-wrap">
+                <h3 className="font-bold text-[#0f172a] text-[15px] leading-snug">
+                  {b.title}
+                </h3>
+                <span className={`text-[9px] font-extrabold uppercase tracking-wider border px-2 py-0.5 rounded-full whitespace-nowrap ${b.tagColor}`}>
+                  {b.tag}
+                </span>
+              </div>
+              <p className="text-slate-500 text-[13px] leading-relaxed">
+                {b.text}
               </p>
             </div>
           </div>

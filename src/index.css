@@ -2,38 +2,94 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
+/* =====================================================
+   LAWCTOPUS LAW SCHOOL — DESIGN SYSTEM
+   Color Palette:
+     Primary:    #991b1b  (Deep Crimson — authoritative)
+     Accent:     #b45309  (Amber Gold — premium, warmth)
+     Text Dark:  #0f172a  (Slate-950 — richer contrast)
+     BG Warm:    #faf9f7  (Off-white — not sterile)
+   ===================================================== */
+
+:root {
+  --color-primary:    #991b1b;
+  --color-primary-hover: #7f1d1d;
+  --color-accent:     #b45309;
+  --color-accent-light: #fef3c7;
+  --color-text-dark:  #0f172a;
+  --color-bg-warm:    #faf9f7;
+  --color-bg-card:    #ffffff;
+  --color-border:     rgba(226, 232, 240, 0.7);
+}
+
 @theme {
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-  --color-brand-blue: #2563eb;
-  --color-brand-indigo: #4f46e5;
-  --color-brand-amber: #d97706;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-  background-color: #fafafa;
-  color: #171717;
+  background-color: var(--color-bg-warm);
+  color: var(--color-text-dark);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar hiding helper */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
+/* ── Scrollbar hiding ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Drawer Slide-Up Animation Keyframe */
+/* ── Slide-up drawer animation ── */
 @keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
 }
 .animate-slide-up {
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── CTA Pulse Glow (for primary enroll buttons) ── */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(153, 27, 27, 0);
+  }
+}
+.cta-pulse {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* ── Gradient section heading underline ── */
+.heading-underline {
+  display: block;
+  height: 3px;
+  width: 56px;
+  margin-top: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #991b1b 0%, #b45309 100%);
+}
+
+/* ── Faint section number (background) ── */
+.section-num {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #f1f5f9;
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Active sidebar dot pulse ── */
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(1.4); }
+}
+.sidebar-dot-active {
+  animation: dotPulse 1.6s ease-in-out infinite;
 }

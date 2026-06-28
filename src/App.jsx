@@ -90,7 +90,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] text-slate-900 font-sans antialiased selection:bg-rose-600 selection:text-white">
+    <div className="min-h-screen bg-[#faf9f7] text-[#0f172a] font-sans antialiased selection:bg-[#991b1b] selection:text-white">
       {/* 1. Sticky Header */}
       <Header />
       

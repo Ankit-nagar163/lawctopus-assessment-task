@@ -4,7 +4,7 @@ export default function Sidebar({ activeSection, sidebarItems, onItemClick }) {
   const activeRef = useRef(null);
   const sidebarRef = useRef(null);
 
-  // Auto-scroll logic to keep highlighted elements visible within the sidebar viewport (Desktop)
+  // Auto-scroll logic to keep highlighted elements visible within the sidebar
   useEffect(() => {
     if (!sidebarRef.current) return;
 
@@ -12,32 +12,27 @@ export default function Sidebar({ activeSection, sidebarItems, onItemClick }) {
     const lastItemId = sidebarItems[sidebarItems.length - 1]?.id;
 
     if (activeSection === firstItemId) {
-      sidebarRef.current.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      sidebarRef.current.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (activeSection === lastItemId) {
-      sidebarRef.current.scrollTo({
-        top: sidebarRef.current.scrollHeight,
-        behavior: 'smooth'
-      });
+      sidebarRef.current.scrollTo({ top: sidebarRef.current.scrollHeight, behavior: 'smooth' });
     } else if (activeRef.current) {
-      activeRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
-      });
+      activeRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }, [activeSection, sidebarItems]);
 
   return (
     <aside
       ref={sidebarRef}
-      className="hidden lg:block lg:col-span-3 sticky top-[88px] max-h-[calc(100vh-120px)] overflow-y-auto pr-3 no-scrollbar border-r border-slate-100"
+      className="hidden lg:block lg:col-span-3 sticky top-[88px] max-h-[calc(100vh-120px)] overflow-y-auto pr-3 no-scrollbar"
     >
       <div className="py-2">
-        <h3 className="text-rose-800 font-extrabold text-xs uppercase tracking-wider pl-3 mb-4">
-          What's Inside
-        </h3>
+        {/* Sidebar header */}
+        <div className="pl-3 mb-5">
+          <p className="text-[10px] font-extrabold text-[#b45309] uppercase tracking-widest mb-0.5">
+            Course Contents
+          </p>
+          <div className="h-px bg-gradient-to-r from-[#991b1b]/30 to-transparent mt-1.5"></div>
+        </div>
 
         {/* Navigation list */}
         <nav className="space-y-0.5">
@@ -52,30 +47,39 @@ export default function Sidebar({ activeSection, sidebarItems, onItemClick }) {
                   e.preventDefault();
                   onItemClick(item.id);
                 }}
-                className={`block px-3 py-1.5 rounded-xl text-[13px] leading-snug transition-all duration-150 ${isActive
-                  ? 'bg-rose-50 text-rose-800 font-bold border-l-4 border-rose-800 pl-2 rounded-l-none'
-                  : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-slate-900 pl-3'
-                  }`}
+                className={`group flex items-start gap-2.5 px-3 py-1.5 rounded-r-xl text-[12.5px] leading-snug transition-all duration-150 ${
+                  isActive
+                    ? 'bg-red-50 text-[#991b1b] font-bold border-l-2 border-[#991b1b] pl-2.5 rounded-l-none'
+                    : 'text-slate-500 font-medium hover:bg-slate-50 hover:text-slate-800 pl-3'
+                }`}
               >
-                {item.label}
+                {/* Animated active dot */}
+                <span
+                  className={`mt-[5px] w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all duration-200 ${
+                    isActive
+                      ? 'bg-[#991b1b] sidebar-dot-active'
+                      : 'bg-slate-200 group-hover:bg-slate-400'
+                  }`}
+                ></span>
+                <span className="leading-[1.45]">{item.label}</span>
               </a>
             );
           })}
         </nav>
 
-        {/* Share and Download Buttons flow naturally at the end of the sidebar list */}
-        <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-around text-slate-500 text-xs font-bold">
-          <button className="flex items-center gap-2 hover:text-rose-700 transition-colors py-1.5 px-3.5 rounded-lg hover:bg-slate-50">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186l.09.034m-.09-.034a2.25 2.25 0 001.272.647m-1.272-.681a2.25 2.25 0 001.313.704m-1.442-.738l.09.034m1.352-.068a2.25 2.25 0 00.129 1.15m-.13-1.15a2.25 2.25 0 01.13 1.15m-1.482-.034l.09-.034m1.392.068a2.25 2.25 0 001.272-.647m-1.272.681a2.25 2.25 0 01-1.313-.704M12 5.25a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zM12 14.25a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
+        {/* Share and Download Buttons */}
+        <div className="mt-6 pt-4 border-t border-dashed border-slate-200 flex items-center justify-around text-slate-500 text-xs font-bold">
+          <button className="flex items-center gap-2 hover:text-[#991b1b] transition-colors py-1.5 px-3.5 rounded-lg hover:bg-red-50">
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
             </svg>
             Share
           </button>
-          <button className="flex items-center gap-2 hover:text-rose-700 transition-colors py-1.5 px-3.5 rounded-lg hover:bg-slate-50">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          <button className="flex items-center gap-2 hover:text-[#991b1b] transition-colors py-1.5 px-3.5 rounded-lg hover:bg-red-50">
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
-            Download PDF
+            PDF
           </button>
         </div>
       </div>

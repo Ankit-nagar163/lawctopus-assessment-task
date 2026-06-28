@@ -252,7 +252,7 @@ export default function DetailedStructure() {
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
           Structure of this Course
         </h2>
-        <div className="h-1 w-20 bg-rose-700 rounded-full"></div>
+        <span className="heading-underline"></span>
       </div>
 
       {/* Month Overview Summary List */}

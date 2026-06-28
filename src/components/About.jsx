@@ -33,11 +33,14 @@ export default function About() {
       <section className="space-y-8">
         
         {/* Section Heading */}
-        <div className="space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-            About the 6-Month Long Expert-Level Course on Mastering Contract Drafting and Freelancing
-          </h2>
-          <div className="h-1 w-20 bg-rose-700 rounded-full"></div>
+        <div className="flex items-start gap-4">
+          <span className="section-num hidden sm:block select-none" aria-hidden="true">01</span>
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight leading-snug">
+              About the 6-Month Long Expert-Level Course on Mastering Contract Drafting and Freelancing
+            </h2>
+            <span className="heading-underline"></span>
+          </div>
         </div>
 
         <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed">
@@ -48,15 +51,15 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Card 1: Months 1-2 */}
-          <div className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
+          <div className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-[#b45309]/30 transition-all duration-200 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-extrabold text-rose-700 uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">
+                <span className="text-[10px] font-extrabold text-[#991b1b] uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">
                   Phase 1
                 </span>
-                <span className="text-sm font-bold text-slate-400">Months 1 – 2</span>
+                <span className="text-xs font-bold text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full">Months 1 – 2</span>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3">
+              <h3 className="text-lg font-bold text-[#0f172a] mb-3 group-hover:text-[#991b1b] transition-colors duration-200">
                 Fundamentals of Contract Drafting
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -66,15 +69,15 @@ export default function About() {
           </div>
 
           {/* Card 2: Months 3-6 */}
-          <div className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
+          <div className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-[#b45309]/30 transition-all duration-200 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-extrabold text-rose-700 uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">
+                <span className="text-[10px] font-extrabold text-[#b45309] uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full">
                   Phase 2
                 </span>
-                <span className="text-sm font-bold text-slate-400">Months 3 – 6</span>
+                <span className="text-xs font-bold text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full">Months 3 – 6</span>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3">
+              <h3 className="text-lg font-bold text-[#0f172a] mb-3 group-hover:text-[#991b1b] transition-colors duration-200">
                 Advanced Specializations
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -87,8 +90,10 @@ export default function About() {
 
         {/* Additional details list styled in a clean grid */}
         <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 space-y-6">
-          <h4 className="text-sm font-extrabold text-slate-800 uppercase tracking-wider">
-            Key Program Components & Freelance Training:
+          <h4 className="text-[11px] font-extrabold text-[#b45309] uppercase tracking-widest flex items-center gap-2">
+            <span className="w-4 h-0.5 bg-[#b45309] rounded-full inline-block"></span>
+            Key Program Components & Freelance Training
+            <span className="w-4 h-0.5 bg-[#b45309] rounded-full inline-block"></span>
           </h4>
           
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
