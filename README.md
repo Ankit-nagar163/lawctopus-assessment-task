@@ -1,6 +1,11 @@
 # Lawctopus Landing Page Redesign (Web Developer Assessment)
 
-This repository contains my submission for the Web Developer assessment task at Lawctopus. The goal was to redesign and modernize the landing page for the **"Mastering Contract Drafting and Freelancing"** course.
+A modern, high-conversion Single Page Application (SPA) landing page redesign built with **React**, **Vite**, and **Tailwind CSS** for the Lawctopus Web Developer assignment task. 
+
+* **Live Deployed Site:** [https://lawctopus-assessment-task.vercel.app/](https://lawctopus-assessment-task.vercel.app/)
+* **GitHub Repository:** [https://github.com/Ankit-nagar163/lawctopus-assessment-task](https://github.com/Ankit-nagar163/lawctopus-assessment-task)
+
+This project transforms the legacy WordPress course page into a fast, premium, mobile-responsive, and user-centric learning hub for the **"Mastering Contract Drafting and Freelancing"** course.
 
 I built this page from scratch using **React + Vite** and styled it with **Tailwind CSS**. It is fully responsive, optimized for loading speed, and structured to guide a user naturally from the course overview to pricing and registration details.
 
