@@ -1,21 +1,54 @@
-<<<<<<< HEAD
-# React + Vite
+# Lawctopus Course Landing Page Redesign (Assessment Task)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, high-conversion Single Page Application (SPA) landing page redesign built with **React**, **Vite**, and **Tailwind CSS** for the Lawctopus Web Developer assignment task. 
 
-Currently, two official plugins are available:
+This project transforms the legacy WordPress course page into a fast, premium, mobile-responsive, and user-centric learning hub.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Premium Color System:** Leverages a polished corporate legal color scheme featuring **Deep Crimson** (`#991b1b`) for authority and **Amber Gold** (`#b45309`) for accent highlights over a warm off-white canvas.
+* **Unified Icons Library (`Icons.jsx`):** Removed generic emojis/AI templates and implemented a custom library of 30+ consistent, line-drawn SVG icons for high visual appeal.
+* **Responsive Metric Widgets:** The Hero section features interactive stat widgets showing social proof (Learners enrolled, Satisfaction ratings, Next batch dates) with clean visual styling and hover animations.
+* **Interactive Section Navigation (Sidebar Scrollspy):** A sticky sidebar navigation that automatically highlights the current section as the user scrolls, driven by the `IntersectionObserver` API.
+* **Conversion-Driven Layout:** Includes custom-designed comparison structures, feature checklists, premium pricing cards with transparent savings badges, and a dark-theme trust guarantee banner.
+* **Fully Responsive Design:** Tailored layout scaling across mobile, tablet, and desktop viewports, with wrap-around breadcrumb structures.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
-# lawctopus-assessment-task
-Modern, conversion-focused landing page built with React for the Lawctopus Web Developer assignment task.
->>>>>>> 46e39f4d2a436a6a567a83f95babb4bab6015b39
+## 🛠️ Tech Stack
+
+* **Frontend Library:** React (Functional components, hooks)
+* **Build System & Dev Server:** Vite (Fast Refresh & HMR)
+* **Styling Framework:** Tailwind CSS (Utility classes & CSS custom properties)
+* **Icons:** Custom SVG path exports
+
+---
+
+## 💻 Getting Started
+
+Follow these steps to run the project locally on your machine:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Ankit-nagar163/lawctopus-assessment-task.git
+cd lawctopus-assessment-task
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the development server
+```bash
+npm run dev
+```
+Open `http://localhost:5173` in your browser to view the application.
+
+### 4. Build for production
+```bash
+npm run build
+```
+This generates optimized static assets inside the `dist/` directory.
