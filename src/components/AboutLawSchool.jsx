@@ -40,9 +40,7 @@ export default function AboutLawSchool() {
       {/* Paragraph body */}
       <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed bg-white border border-slate-200/50 p-6 rounded-2xl">
         <a 
-          href="https://www.lawctopus.com/lawschool" 
-          target="_blank" 
-          rel="noreferrer" 
+          href="#" 
           className="text-rose-800 font-bold hover:underline transition-colors"
         >
           Lawctopus Law School

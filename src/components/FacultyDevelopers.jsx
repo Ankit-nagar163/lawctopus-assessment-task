@@ -29,7 +29,7 @@ export default function FacultyDevelopers() {
       image: akankshaImg,
       bio: [
         <span>
-          Akanksha is currently working as the <strong className="text-slate-900 font-extrabold">Head of Lawctopus Law School</strong>, where she has taught <a href="https://www.lawctopuslawschool.com" target="_blank" rel="noreferrer" className="text-rose-700 font-bold hover:underline">contract drafting & negotiation course</a> to 1500+ learners and has received an average rating of 96.5/100.
+          Akanksha is currently working as the <strong className="text-slate-900 font-extrabold">Head of Lawctopus Law School</strong>, where she has taught <a href="#" className="text-rose-700 font-bold hover:underline">contract drafting & negotiation course</a> to 1500+ learners and has received an average rating of 96.5/100.
         </span>,
         "Akanksha Mishra is an independent litigator with diverse experience in commercial and real estate litigation. She is practicing at the Bombay High Court, Nagpur Bench.",
         "Akanksha has also been the corporate counsel for many start-ups, media companies, software developer companies, and PSUs like BHEL, MyCaptain, Mastersoft ERP Solutions, etc., where she drafted and reviewed multiple contracts.",
@@ -99,7 +99,7 @@ export default function FacultyDevelopers() {
       bio: [
         "Mr. Tanuj Kalia, the founding CEO of Lawctopus, graduated from NUJS Kolkata in 2013 and completed his MA in Law Politics and Society from AUD in 2019.",
         <span>
-          He’s the author of the book <a href="https://www.amazon.in" target="_blank" rel="noreferrer" className="text-rose-700 font-bold hover:underline">‘Law as a Career’</a> (published by <strong className="text-slate-900 font-extrabold">LexisNexis</strong> in 2015) and has keynoted at various forums including <strong className="text-slate-900 font-extrabold">TEDx</strong>, leading private colleges, and NLUs.
+          He’s the author of the book <a href="#" className="text-rose-700 font-bold hover:underline">‘Law as a Career’</a> (published by <strong className="text-slate-900 font-extrabold">LexisNexis</strong> in 2015) and has keynoted at various forums including <strong className="text-slate-900 font-extrabold">TEDx</strong>, leading private colleges, and NLUs.
         </span>,
         "He’s also the winner of Business World Legal 40 under 40 award. He’s currently training to be an ICF-certified coach.",
         "As an MSME business owner he has negotiated business deals ranging from a few lakhs to a few crores in INR."

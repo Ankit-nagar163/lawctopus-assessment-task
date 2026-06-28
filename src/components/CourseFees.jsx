@@ -63,9 +63,7 @@ export default function CourseFees() {
 
             <div className="mt-auto pt-2">
               <a
-                href="https://www.lawctopuslawschool.com/courses/cdn6-months/"
-                target="_blank"
-                rel="noreferrer"
+                href="#"
                 className="cta-pulse w-full flex items-center justify-center gap-2 bg-[#991b1b] hover:bg-[#7f1d1d] text-white text-sm font-extrabold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
               >
                 Enroll in Expert Course
@@ -108,9 +106,7 @@ export default function CourseFees() {
 
             <div className="mt-auto pt-2">
               <a
-                href="https://www.lawctopuslawschool.com/"
-                target="_blank"
-                rel="noreferrer"
+                href="#"
                 className="w-full flex items-center justify-center gap-2 border-2 border-slate-300 hover:border-[#991b1b] hover:text-[#991b1b] text-slate-600 text-sm font-bold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
               >
                 View Foundation Course
